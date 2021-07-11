@@ -59,7 +59,7 @@ const App = () => {
   return (
     <>
       <div className='logo'>
-        <h1 className='logo-text'>News App</h1>
+        <a href="/"><h1 className='logo-text'>News App</h1></a>
       </div>
       <div className='searchbox'>
         <h2>Viewing articles about {term.replace('&max=9', '')} </h2>
