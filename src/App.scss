@@ -1,0 +1,89 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300;700;800&display=swap");
+@import "SearchFormStyle";
+$poppins-font: "Poppins", sans-serif;
+$raleway: "Raleway", sans-serif;
+
+body {
+    margin-right: 30px;
+    background-image: url(images/background.jpg);
+    background-size: cover;
+}
+
+//App logo
+.logo {
+    padding: 30px;
+
+    .logo-text {
+        font-family: $raleway;
+        font-weight: 800;
+        text-transform: uppercase;
+        text-align: center;
+        font-size: 50px;
+        text-shadow: 3px 1px 5px rgba(150, 150, 150, 1);
+        letter-spacing: 0.2em;
+    }
+}
+
+//Search box
+.searchbox {
+    h2 {
+        font-family: $poppins-font;
+        text-align: center;
+        padding: 20px 0;
+    }
+}
+
+
+//Loader
+.loader {
+    padding-top: 100px;
+    display: flex;
+    justify-content: center;
+}
+
+//Card
+.card {
+    margin: 15px;
+    border: 1px solid;
+    display: flex;
+    height: 100%;
+    cursor: pointer;
+    transition: 0.5s;
+
+    img {
+        width: 100%;
+        height: 300px;
+        object-fit: cover;
+    }
+
+    .card-body {
+        padding: 10px;
+    }
+
+    .card-title {
+        font-size: 18px;
+        font-weight: 600;
+        height: 45px;
+    }
+
+    .card-text {
+        height: 46px;
+    }
+
+    .card-footer {
+        padding-left: 10px;
+    }
+
+    .text-truncate {
+        display: -webkit-box !important;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        white-space: normal;
+    }
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 25px 40px rgba(0, 0, 0, 0.5);
+}

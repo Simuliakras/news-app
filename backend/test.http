@@ -1,0 +1,6 @@
+POST http://localhost:8000/project/search
+Content-Type: application/json
+
+{
+    "keyword":"neuroscience"
+}
