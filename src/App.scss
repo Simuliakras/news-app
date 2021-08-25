@@ -2,6 +2,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300;700;800&display=swap");
 @import "SearchFormStyle";
 $poppins-font: "Poppins", sans-serif;
+$shadow: 3px 1px 5px rgba(150, 150, 150, 1);
 $raleway: "Raleway", sans-serif;
 
 body {
@@ -12,29 +13,32 @@ body {
 
 //App logo
 .logo {
-    padding: 30px;
-
-    a, a:hover{
-        text-decoration: none;
-    }
+    padding-top: 60px;
 
     .logo-text {
         font-family: $raleway;
         font-weight: 800;
         text-transform: uppercase;
         text-align: center;
-        font-size: 50px;
-        text-shadow: 3px 1px 5px rgba(150, 150, 150, 1);
+        font-size: 3.8rem;
+        text-shadow: $shadow;
         letter-spacing: 0.2em;
+        color: #000;
+
+        a, a:hover{
+            text-decoration: none;
+            color: black;
+        }
     }
 }
 
 //Search box
 .searchbox {
+    padding: 30px 0;
     h2 {
         font-family: $poppins-font;
         text-align: center;
-        padding: 20px 0;
+        font-size: 1.5rem;
     }
 }
 

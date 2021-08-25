@@ -9,7 +9,7 @@ import SearchForm from './SearchForm';
 const App = () => {
   //Creating states for API data, search parameter and loading state
   const [articles, setArticles] = useState([]);
-  const [term, setTerm] = useState('IBM')
+  const [term, setTerm] = useState('JavaScript')
   const [isLoading, setIsLoading] = useState(true)
 
   //Fetching API data with axios GET
@@ -17,7 +17,7 @@ const App = () => {
     const loadArticles = async () => {
       try {
         const response = await axios.get(
-          `https://gnews.io/api/v4/search?q=${term}&lang=en&token=721fc06c7217f5da1a60096b573ab4db`
+          `https://gnews.io/api/v4/search?q=${term}&lang=en&max=9&token=${process.env.REACT_APP_API_KEY}`
         )
         //Placing API data to state
         setArticles(response.data.articles);
@@ -59,7 +59,7 @@ const App = () => {
   return (
     <>
       <div className='logo'>
-        <a href="/"><h1 className='logo-text'>News App</h1></a>
+        <h1 className='logo-text'><a href="/">News App</a></h1>
       </div>
       <div className='searchbox'>
         <h2>Viewing articles about {term.replace('&max=9', '')} </h2>

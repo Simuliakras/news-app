@@ -6,7 +6,7 @@ const searchSchemaCopy = require('../models/searchSchema')
 const articleDetailsSchemaCopy = require('../models/articleDetailsSchema')
 
 //Getting POST for search keyword from front-end app
-router.post('/search', async (request, response) => {
+router.post('/search', (request, response) => {
 
     //Saving keyword in to schema
     const searchKeyword = new searchSchemaCopy({
@@ -24,7 +24,7 @@ router.post('/search', async (request, response) => {
 })
 
 //Getting POST for article details from front-end app
-router.post('/articleDetails', async (request, response) => {
+router.post('/articleDetails', (request, response) => {
 
     //Saving article details in to schema
     const articleDetails = new articleDetailsSchemaCopy({
@@ -44,4 +44,4 @@ router.post('/articleDetails', async (request, response) => {
         })
 })
 
-module.exports = router
+module.exports = router;
